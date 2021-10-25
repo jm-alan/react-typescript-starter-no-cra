@@ -1,3 +1,5 @@
+import { JSXElementConstructor } from 'react';
+
 const SHOW: string = 'modal/SHOW';
 const HIDE: string = 'modal/HIDE';
 const MOORING: string = 'modal/MOORING';
@@ -6,12 +8,12 @@ const CURRENT: string = 'modal/CURRENT';
 export type modalState = {
   display: boolean,
   mooring: JSX.IntrinsicElements;
-  Current: JSX.Element,
+  Current: JSXElementConstructor<any>,
 };
 
 type modalAction = {
   mooring?: JSX.IntrinsicElements;
-  Current?: JSX.Element,
+  Current?: JSXElementConstructor<any>,
   type: string;
 };
 
@@ -28,7 +30,7 @@ export const SetModalMooring = (mooring: JSX.IntrinsicElements): modalAction => 
   mooring
 });
 
-export const SetModalCurrent = (Current: JSX.Element): modalAction => ({
+export const SetModalCurrent = (Current: JSXElementConstructor<any>): modalAction => ({
   type: CURRENT,
   Current
 });
