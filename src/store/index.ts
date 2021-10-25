@@ -1,8 +1,10 @@
 import { createStore, combineReducers, applyMiddleware, compose, StoreEnhancer } from 'redux';
 import thunk from 'redux-thunk';
 
-const rootReducer = combineReducers({
+import modal from './modal';
 
+const rootReducer = combineReducers({
+  modal
 });
 
 let enhancer: StoreEnhancer;
