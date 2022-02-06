@@ -1,5 +1,5 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { resolve } = require('path');
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import { resolve } from 'path';
 
 module.exports = {
   entry: './src/index.tsx',
@@ -25,7 +25,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader', 'postcss-loader']
+        use: ['style-loader', 'css-loader']
       },
       {
         test: /\.png|svg|jpg|gif$/,
