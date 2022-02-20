@@ -1,12 +1,7 @@
-import { DefaultRootState } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware, compose, StoreEnhancer } from 'redux';
 import thunk from 'redux-thunk';
 
-import modal, { modalState } from './modal';
-
-export interface AppState extends DefaultRootState {
-  modal: modalState;
-}
+import modal from './modal';
 
 const rootReducer = combineReducers({
   modal
@@ -21,6 +16,6 @@ if (process.env.NODE_ENV === 'production') {
   enhancer = compose(applyMiddleware(thunk, logger));
 }
 
-export default function configureStore(preloadedState: any) {
+export default function configureStore (preloadedState: any) {
   return createStore(rootReducer, preloadedState, enhancer);
 }

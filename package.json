@@ -1,5 +1,5 @@
 {
-  "name": "typescript-no-cra",
+  "name": "react-typescript-no-cra",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,34 +7,40 @@
     "start": "webpack serve --mode=development --hot --port 3000",
     "build": "webpack --config webpack.config.ts --mode production"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "css-loader": "^6.6.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-redux": "^7.2.6",
-    "react-router-dom": "^6.2.1",
-    "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.4.1",
-    "ts-loader": "^9.2.6"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jm-alan/react-typescript-starter-no-cra.git"
   },
-  "devDependencies": {
-    "@babel/core": "^7.17.0",
+  "author": "JMA",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jm-alan/react-typescript-starter-no-cra.git"
+  },
+  "homepage": "https://github.com/jm-alan/react-typescript-starter-no-cra.git",
+  "dependencies": {
+    "@babel/core": "^7.17.5",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
-    "@types/node": "^17.0.15",
+    "@types/node": "^17.0.18",
     "@types/react": "^17.0.39",
     "@types/react-dom": "^17.0.11",
     "@types/react-router-dom": "^5.3.3",
     "@types/webpack": "^5.28.0",
     "babel-loader": "^8.2.3",
+    "css-loader": "^6.6.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^6.2.1",
+    "redux": "^4.1.2",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.4.1",
     "style-loader": "^3.3.1",
-    "ts-node": "^10.4.0",
-    "webpack": "^5.68.0",
+    "ts-loader": "^9.2.6",
+    "ts-node": "^10.5.0",
+    "webpack": "^5.69.1",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.4"
   }

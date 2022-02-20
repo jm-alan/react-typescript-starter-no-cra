@@ -1,36 +1,26 @@
-import { JSXElementConstructor } from 'react';
+import type { JSXElementConstructor } from 'react';
 
 const SHOW: string = 'modal/SHOW';
 const HIDE: string = 'modal/HIDE';
 const CURRENT: string = 'modal/CURRENT';
 
-export type modalState = {
-  display: boolean,
-  Current: JSXElementConstructor<any>,
-};
-
-type modalAction = {
-  Current?: JSXElementConstructor<any>,
-  type: string;
-};
-
-export const ShowModal = (): modalAction => ({
+export const ShowModal = (): ModalAction => ({
   type: SHOW
 });
 
-export const HideModal = (): modalAction => ({
+export const HideModal = (): ModalAction => ({
   type: HIDE
 });
 
-export const SetModalCurrent = (Current: JSXElementConstructor<any>): modalAction => ({
+export const SetModalCurrent = (Current: JSXElementConstructor<any>): ModalAction => ({
   type: CURRENT,
   Current
 });
 
-export default function reducer(
-  state: modalState = { display: false, Current: null },
-  { type, Current }: modalAction
-): modalState {
+export default function reducer (
+  state: ModalState = { display: false, Current: null },
+  { type, Current }: ModalAction
+): ModalState {
   switch (type) {
     case SHOW:
       return {
