@@ -1,7 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
-import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
 import App from './App';
 import Modal from './components/Modal';
@@ -16,11 +16,12 @@ const Root: React.FC = () => (
 );
 
 const store = configureStore(undefined);
-
-render(
-  <Provider store={ store }>
-    <Root />
-    <Modal />
-  </Provider>,
-  document.getElementById('root')
+const concurrentRoot = createRoot(document.getElementById('root'));
+concurrentRoot.render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <Root />
+      <Modal />
+    </Provider>
+  </React.StrictMode>
 );
