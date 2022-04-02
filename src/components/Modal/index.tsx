@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { useTypedSelector } from '../../utils/hooks';
 
 export default function Modal (): JSX.Element {
@@ -6,9 +6,9 @@ export default function Modal (): JSX.Element {
   const Current = useTypedSelector(state => state.modal.Current);
 
   return display && Current && (
-    <div className='fixed h-0 w-0'>
-      <div className='fixed inset-0 h-screen w-screen bg-black opacity-70 flex items-center justify-center'>
-        <div className='h-2/3 bg-gray-700 w-2/3 rounded-2xl flex items-center justify-center'>
+    <div>
+      <div>
+        <div>
           <Current />
         </div>
       </div>
