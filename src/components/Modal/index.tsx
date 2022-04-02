@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { useTypedSelector } from '../../utils/hooks';
 
 export default function Modal (): JSX.Element {
